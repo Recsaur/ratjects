@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://d081irh0a1s6v"]
+
+[ext_resource type="Script" uid="uid://cb7fplfv7ibua" path="res://rat.gd" id="1_1l88y"]
+[ext_resource type="Texture2D" uid="uid://iwghrbquosmc" path="res://assets/idle/idlemouse1.png" id="2_u8fq5"]
+[ext_resource type="Texture2D" uid="uid://daymd3nq0kxvq" path="res://assets/idle/idlemouse2.png" id="3_nkgqy"]
+[ext_resource type="Texture2D" uid="uid://dllys1o6tx7mj" path="res://assets/idle/idlemouse3.png" id="4_d2y1h"]
+[ext_resource type="Texture2D" uid="uid://dseunwvbx5t00" path="res://assets/idle/idlemouse4.png" id="5_a0rjm"]
+[ext_resource type="Texture2D" uid="uid://dw7aewl7pkrj3" path="res://assets/idle/idlemouse5.png" id="6_e3ywk"]
+[ext_resource type="Texture2D" uid="uid://tdcaj6idsipj" path="res://assets/idle/idlemouse6.png" id="7_jyerr"]
+[ext_resource type="Texture2D" uid="uid://cdopt82v7ip2r" path="res://assets/walk/walkmouse1.png" id="8_lnun8"]
+[ext_resource type="Texture2D" uid="uid://bldj6iavfj4h1" path="res://assets/walk/walkmouse2.png" id="9_qb30i"]
+[ext_resource type="Texture2D" uid="uid://bl8qmg57e6kuw" path="res://assets/walk/walkmouse3.png" id="10_vc6ob"]
+[ext_resource type="Texture2D" uid="uid://coysnownyjw3u" path="res://assets/walk/walkmouse4.png" id="11_7jvyr"]
+[ext_resource type="Texture2D" uid="uid://cgigj1qkl4kae" path="res://assets/walk/walkmouse5.png" id="12_ebd01"]
+[ext_resource type="Texture2D" uid="uid://me3u8vv5a1kc" path="res://assets/walk/walkmouse6.png" id="13_3beqd"]
+[ext_resource type="Texture2D" uid="uid://c2631jyex6dj1" path="res://assets/walk/walkmouse7.png" id="14_x00o1"]
+[ext_resource type="Texture2D" uid="uid://bq4jgd08o711p" path="res://assets/walk/walkmouse8.png" id="15_lc5fw"]
+[ext_resource type="Texture2D" uid="uid://c6d2lkoeiqpj3" path="res://assets/walk/walkmouse9.png" id="16_q32c2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_77a1s"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8olv0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_u8fq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nkgqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_d2y1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_a0rjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_e3ywk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jyerr")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_lnun8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_qb30i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_vc6ob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_7jvyr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ebd01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_3beqd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_x00o1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_lc5fw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_q32c2")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 18.0
+}]
+
+[node name="Rat" type="CharacterBody2D" unique_id=899267224]
+script = ExtResource("1_1l88y")
+
+[node name="Tail" type="Node2D" parent="." unique_id=1101256311]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=25280678]
+shape = SubResource("RectangleShape2D_77a1s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1615961380]
+sprite_frames = SubResource("SpriteFrames_8olv0")
+animation = &"walk"
+frame_progress = 0.12723666
