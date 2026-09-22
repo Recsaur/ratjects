@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://djgm0sj815lh0"]
+
+[ext_resource type="Script" uid="uid://buh6f8wioillw" path="res://boing.gd" id="1_dl7el"]
+[ext_resource type="Texture2D" uid="uid://da2nyfuvh1kol" path="res://assets/spring/spring1.png" id="2_mcylt"]
+[ext_resource type="Texture2D" uid="uid://dsby7svbha735" path="res://assets/spring/spring9.png" id="3_xbquw"]
+[ext_resource type="Texture2D" uid="uid://cmwbw8c0p1n5n" path="res://assets/spring/spring10.png" id="4_tjipa"]
+[ext_resource type="Texture2D" uid="uid://dmf816lwqv03u" path="res://assets/spring/spring2.png" id="5_jb7sp"]
+[ext_resource type="Texture2D" uid="uid://c3diuyet1ltuo" path="res://assets/spring/spring3.png" id="6_lrbil"]
+[ext_resource type="Texture2D" uid="uid://bxgj6a4fyttno" path="res://assets/spring/spring4.png" id="7_rv34g"]
+[ext_resource type="Texture2D" uid="uid://dhbxywjm7iymb" path="res://assets/spring/spring5.png" id="8_356ln"]
+[ext_resource type="Texture2D" uid="uid://b8aaba783guw4" path="res://assets/spring/spring6.png" id="9_fdqxu"]
+[ext_resource type="Texture2D" uid="uid://bgv88qy212jw3" path="res://assets/spring/spring7.png" id="10_47dc6"]
+[ext_resource type="Texture2D" uid="uid://cyxloh0msd7xc" path="res://assets/spring/spring8.png" id="11_j1pne"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s87se"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mcylt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xbquw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tjipa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mcylt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jb7sp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lrbil")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rv34g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_356ln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_fdqxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_47dc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_j1pne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xbquw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tjipa")
+}],
+"loop": false,
+"name": &"sproing",
+"speed": 14.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tm14v"]
+size = Vector2(52.5, 10)
+
+[node name="boing" type="Node2D" unique_id=946826172]
+script = ExtResource("1_dl7el")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=712793587]
+sprite_frames = SubResource("SpriteFrames_s87se")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2034112174]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=275453031]
+position = Vector2(0, 26)
+shape = SubResource("RectangleShape2D_tm14v")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://4pu8sbatxtof"]
+
+[ext_resource type="Script" uid="uid://dwaugq01upicv" path="res://cheese.gd" id="1_6ih6m"]
+[ext_resource type="Texture2D" uid="uid://dou2a28mctrd6" path="res://assets/Cheese pixel art-export.png" id="2_gv6i6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xi2t1"]
+size = Vector2(29, 31)
+
+[node name="Cheese" type="Area2D" unique_id=1434209547]
+script = ExtResource("1_6ih6m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=647539958]
+position = Vector2(1.5, -0.5)
+shape = SubResource("RectangleShape2D_xi2t1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1266782679]
+texture = ExtResource("2_gv6i6")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
