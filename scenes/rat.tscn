@@ -17,7 +17,9 @@
 [ext_resource type="Texture2D" uid="uid://bq4jgd08o711p" path="res://assets/walk/walkmouse8.png" id="15_lc5fw"]
 [ext_resource type="Texture2D" uid="uid://c6d2lkoeiqpj3" path="res://assets/walk/walkmouse9.png" id="16_q32c2"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_77a1s"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u8fq5"]
+radius = 11.0
+height = 44.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8olv0"]
 animations = [{
@@ -108,7 +110,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 18.0
+"speed": 24.0
 }]
 
 [node name="Rat" type="CharacterBody2D" unique_id=899267224]
@@ -117,12 +119,14 @@ script = ExtResource("1_1l88y")
 [node name="Tail" type="Node2D" parent="." unique_id=1101256311]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=25280678]
-shape = SubResource("RectangleShape2D_77a1s")
+shape = SubResource("CapsuleShape2D_u8fq5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1615961380]
+position = Vector2(0, -10)
 sprite_frames = SubResource("SpriteFrames_8olv0")
 animation = &"walk"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=975432251]
+position = Vector2(0, -17)
 zoom = Vector2(3.5, 3.5)
 position_smoothing_enabled = true

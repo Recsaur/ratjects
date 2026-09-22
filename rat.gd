@@ -1,13 +1,13 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const SPEED = 200.0
+const JUMP_VELOCITY = -350.0
 @onready var spriteanims = $AnimatedSprite2D
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
-	var direction := Input.get_axis("ui_left", "ui_right")
+	var direction := Input.get_axis("left", "right")
 	if direction:
 		velocity.x = direction * SPEED
 		if direction < 0:
