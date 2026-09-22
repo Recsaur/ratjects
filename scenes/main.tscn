@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cxtpy0pex134f" path="res://assets/tiles/tile5.png" id="5_ya4ey"]
 [ext_resource type="PackedScene" uid="uid://4pu8sbatxtof" path="res://scenes/cheese.tscn" id="8_tipki"]
 [ext_resource type="PackedScene" uid="uid://djgm0sj815lh0" path="res://scenes/boing.tscn" id="9_85g3d"]
+[ext_resource type="PackedScene" uid="uid://cmhnb1qh8fjny" path="res://scenes/bigcheese.tscn" id="10_choun"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sgp6g"]
 size = Vector2(1173, 20)
@@ -111,9 +112,6 @@ position = Vector2(92, 450)
 [node name="Cheese" parent="Cheesesss" unique_id=1434209547 instance=ExtResource("8_tipki")]
 position = Vector2(338, 551)
 
-[node name="Cheese2" parent="Cheesesss" unique_id=1971371628 instance=ExtResource("8_tipki")]
-position = Vector2(483, 551)
-
 [node name="Cheese3" parent="Cheesesss" unique_id=576257020 instance=ExtResource("8_tipki")]
 position = Vector2(767, 551)
 
@@ -138,12 +136,27 @@ position = Vector2(30, 220)
 [node name="Cheese10" parent="Cheesesss" unique_id=1861685632 instance=ExtResource("8_tipki")]
 position = Vector2(30, 174)
 
-[node name="Cheese11" parent="Cheesesss" unique_id=1602116855 instance=ExtResource("8_tipki")]
-position = Vector2(1033, 125)
-scale = Vector2(5.041246, 5.041246)
+[node name="Cheese12" parent="Cheesesss" unique_id=1203775886 instance=ExtResource("8_tipki")]
+position = Vector2(1100, 490)
+
+[node name="Cheese13" parent="Cheesesss" unique_id=287193453 instance=ExtResource("8_tipki")]
+position = Vector2(1100, 444)
+
+[node name="Cheese14" parent="Cheesesss" unique_id=1044975933 instance=ExtResource("8_tipki")]
+position = Vector2(1100, 304)
+
+[node name="Cheese15" parent="Cheesesss" unique_id=1663890613 instance=ExtResource("8_tipki")]
+position = Vector2(1100, 400)
+
+[node name="Cheese16" parent="Cheesesss" unique_id=827707564 instance=ExtResource("8_tipki")]
+position = Vector2(1100, 354)
 
 [node name="boing" parent="." unique_id=946826172 instance=ExtResource("9_85g3d")]
 position = Vector2(1102, 542)
 
 [node name="boing2" parent="." unique_id=246246913 instance=ExtResource("9_85g3d")]
 position = Vector2(32, 352)
+
+[node name="Cheese" parent="." unique_id=117457750 instance=ExtResource("10_choun")]
+position = Vector2(1013, 117)
+scale = Vector2(4.535611, 4.535611)

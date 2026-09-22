@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cd5k0vb1rgsbs"]
+
+[ext_resource type="Texture2D" uid="uid://cxtpy0pex134f" path="res://assets/tiles/tile5.png" id="1_le6rm"]
+[ext_resource type="Script" uid="uid://bhi7cn8jnf6mo" path="res://scenes/fx_control.gd" id="2_8hy5y"]
+
+[sub_resource type="Curve" id="Curve_8hy5y"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_yo6up"]
+curve = SubResource("Curve_8hy5y")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_n6awc"]
+particle_flag_disable_z = true
+spread = 180.0
+initial_velocity_min = 273.68
+initial_velocity_max = 489.47
+gravity = Vector3(0, 98, 0)
+scale_min = 0.25
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_yo6up")
+
+[node name="FXControl" type="GPUParticles2D" unique_id=280902014]
+modulate = Color(18.892157, 18.892157, 18.892157, 1)
+scale = Vector2(0.42336786, 0.42336786)
+emitting = false
+texture = ExtResource("1_le6rm")
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_n6awc")
+script = ExtResource("2_8hy5y")

@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://c2631jyex6dj1" path="res://assets/walk/walkmouse7.png" id="14_x00o1"]
 [ext_resource type="Texture2D" uid="uid://bq4jgd08o711p" path="res://assets/walk/walkmouse8.png" id="15_lc5fw"]
 [ext_resource type="Texture2D" uid="uid://c6d2lkoeiqpj3" path="res://assets/walk/walkmouse9.png" id="16_q32c2"]
+[ext_resource type="Script" uid="uid://bikwifo6qpo5d" path="res://scenes/camera_2d.gd" id="17_nkgqy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u8fq5"]
 radius = 11.0
@@ -130,6 +131,7 @@ animation = &"walk"
 position = Vector2(0, -17)
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
+script = ExtResource("17_nkgqy")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=79524804]
 layer = 10

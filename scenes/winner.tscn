@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c457vvkilvstc"]
+
+[ext_resource type="Texture2D" uid="uid://b01apxrussrmv" path="res://assets/backck.png" id="1_0fqbm"]
+[ext_resource type="Texture2D" uid="uid://bucqdlr60nsud" path="res://assets/eatche.png" id="2_6vg2h"]
+
+[node name="winner" type="Node2D" unique_id=1712391742]
+
+[node name="Backck" type="Sprite2D" parent="." unique_id=811247879]
+position = Vector2(578.99994, 324.5)
+scale = Vector2(22.181818, 18.48718)
+texture = ExtResource("1_0fqbm")
+
+[node name="Eatche" type="Sprite2D" parent="." unique_id=551673747]
+position = Vector2(576.00006, 327)
+scale = Vector2(3.822989, 3.822989)
+texture = ExtResource("2_6vg2h")
